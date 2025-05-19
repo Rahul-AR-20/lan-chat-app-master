@@ -90,18 +90,11 @@ public class ChatApp extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        String inputPassword = javax.swing.JOptionPane.showInputDialog(this, "Enter Password:");
-        String correctPassword = "java"; // change to your desired password
-
-        if (inputPassword != null && inputPassword.equals(correctPassword)) {
-            this.setVisible(false);
-            new MultiClient();
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "Incorrect Password!", "Access Denied", javax.swing.JOptionPane.ERROR_MESSAGE);
-        }
-
-    
+        this.setVisible(false);
+        MultiClient chatRoom = new MultiClient(); // open chat client
+//        chatRoom.setVisible(true); // make sure it appears
     }//GEN-LAST:event_jButton2ActionPerformed
+//
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
        
