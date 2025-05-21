@@ -68,7 +68,8 @@ public class LoginPage extends JFrame {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/chatdb", "root", "Rahul@2006");
+                    "jdbc:mysql://192.168.1.54/chatdb", "chatuser", "password");
+
 
             PreparedStatement stmt = conn.prepareStatement(
                 "SELECT * FROM user WHERE username = ? AND password = ?");
